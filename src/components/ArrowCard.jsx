@@ -1,14 +1,6 @@
-import React, { useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 
 const ArrowCard = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpansion = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
     <div className="bg-white p-4 rounded-xl shadow-md">
       <div className="flex justify-between items-center">
@@ -17,13 +9,7 @@ const ArrowCard = () => {
           Duis aute irure dolor in reprehenderit
         </h2>
         <button className="relative rounded-full border-2 border-black p-2 group overflow-hidden hover:bg-black">
-          <div
-            className={`transition-transform duration-500 ${
-              isExpanded ? "rotate-45" : "rotate-0"
-            } `}
-          >
-            <GoArrowUpRight className=" text-black transition-transform hover:rotate-45 duration-200 group-hover:text-white" />
-          </div>
+          <GoArrowUpRight className=" text-black transition-transform hover:rotate-45 duration-200 group-hover:text-white" />
         </button>
       </div>
 
