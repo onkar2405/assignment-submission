@@ -1,7 +1,12 @@
-import "./App.css";
+import "./index.css";
+import MainPanel from "./components/mainpanel/MainPanel";
 
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <MainPanel />
+    </div>
+  );
 }
 
 export default App;

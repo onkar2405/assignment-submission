@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", // This includes all the JSX files in your src folder
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        15: "15%",
+        30: "30%",
+      },
+    },
   },
   plugins: [],
 };
