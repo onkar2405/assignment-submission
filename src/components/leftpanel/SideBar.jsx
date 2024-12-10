@@ -17,7 +17,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col w-15">
+    <div className="bg-white flex flex-col w-50">
       <Profile />
       <hr className="mx-4"></hr>
       <div className="mt-8 flex-1">

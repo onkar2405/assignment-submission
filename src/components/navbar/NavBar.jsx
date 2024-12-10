@@ -38,9 +38,9 @@ const productList = [
   },
 ];
 
-const Navbar = () => {
+const NavBar = () => {
   return (
-    <nav className="bg-gray-800 w-80 text-white rounded-xl">
+    <nav className="bg-gray-800 w-60 text-white rounded-xl">
       <div className="container px-1 py-1 flex justify-between items-center">
         <div className="flex gap-6 items-center">
           <div className="bg-blue-500 w-10 h-10 rounded-xl mr-4"></div>
@@ -65,4 +65,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

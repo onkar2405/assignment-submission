@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export const DropButton = ({ name, resourceList }) => {
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
@@ -15,7 +15,11 @@ export const DropButton = ({ name, resourceList }) => {
         onClick={toggleResourcesDropdown}
       >
         {name}
-        <IoIosArrowDown className="ml-1" />
+        <IoIosArrowDown
+          className={`ml-1 transition-transform duration-500 ${
+            isResourcesDropdownOpen ? "transform rotate-180" : ""
+          }`}
+        />
       </button>
       {isResourcesDropdownOpen && (
         <ul className="absolute bg-gray-800 text-white mt-2 rounded-xl shadow-md ">

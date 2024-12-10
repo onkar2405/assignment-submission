@@ -3,9 +3,9 @@ import UserProfilesWrapper from "../rightpanel/UserProfilesWrapper";
 
 const MainPanel = () => {
   return (
-    <div className="flex gap-4 bg-gray-100">
+    <div className="flex gap-4 bg-gray-100 rounded-xl">
       <SideBar />
-      <div className="flex-1 p-8">
+      <div className="p-8">
         <UserProfilesWrapper />
       </div>
     </div>

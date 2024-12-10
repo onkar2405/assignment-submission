@@ -1,12 +1,10 @@
+import MainPage from "./components/MainPage";
 import "./index.css";
-import MainPanel from "./components/mainpanel/MainPanel";
-import Navbar from "./components/navbar/NavBar";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <MainPanel />
+    <div className="font-inter bg-gray-100 h-full py-12">
+      <MainPage />
     </div>
   );
 }
