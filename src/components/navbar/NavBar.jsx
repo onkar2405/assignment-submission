@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { DropButton } from "./DropButton";
 import { RiApps2Line } from "react-icons/ri";
 import { PiTreeStructure } from "react-icons/pi";
@@ -39,10 +39,25 @@ const productList = [
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-gray-800 w-80 lg:w-80 text-white rounded-xl">
@@ -87,7 +102,10 @@ const NavBar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="xl-custom:hidden absolute top-0 left-0 w-full bg-gray-800 text-white p-4 rounded-b-xl">
+          <div
+            ref={menuRef}
+            className="xl-custom:hidden absolute top-0 left-0 w-30 bg-gray-800 text-white p-4 rounded-b-xl"
+          >
             <div className="flex flex-col gap-4">
               <DropButton name="Products" resourceList={productList} />
               <a href="#" className="text-sm font-medium hover:text-gray-300">
@@ -101,11 +119,16 @@ const NavBar = () => {
               <a href="#" className="text-sm font-medium hover:text-gray-300">
                 Sign In
               </a>
+              <div>
+                <button className="bg-white hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-xl mt-4">
+                  Start for free
+                </button>
+              </div>
             </div>
           </div>
         )}
 
-        <button className="bg-white hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-xl lg:block">
+        <button className="bg-white hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-xl lg:block hidden">
           Start for free
         </button>
       </div>
