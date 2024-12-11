@@ -24,7 +24,8 @@ module.exports = {
         md: "20%",
       },
       screens: {
-        "xl-custom": "1270px", // Add this custom breakpoint
+        "xl-custom": "1270px",
+        xs: "320px",
       },
     },
   },

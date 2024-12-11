@@ -33,7 +33,7 @@ const SideBar = () => {
       <div
         className={`${
           isSidebarOpen ? "block" : "hidden"
-        } lg:block bg-white flex flex-col p-4 h-full fixed inset-0 lg:relative lg:w-100 transition-all duration-300 ease-in-out z-40`}
+        } lg:block bg-white flex flex-col p-4 h-full fixed inset-0 lg:relative lg:w-100 transition-all duration-300 ease-in-out`}
         style={{
           width: isSidebarOpen && window.innerWidth < 1024 ? "70%" : "100%",
           maxWidth: isSidebarOpen && window.innerWidth < 1024 ? "70%" : "100%",
