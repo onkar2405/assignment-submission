@@ -4,11 +4,11 @@ import FeatureCard from "./FeatureCard";
 
 const cards = [
   "AI.png",
-  "/Mobile.png",
-  "/IFrame.png",
+  "Mobile.png",
+  "IFrame.png",
   "AI.png",
-  "/Mobile.png",
-  "/IFrame.png",
+  "Mobile.png",
+  "IFrame.png",
 ];
 
 const CustomCarousel = () => {
