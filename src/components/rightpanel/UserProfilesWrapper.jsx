@@ -1,6 +1,5 @@
 import React from "react";
-import CardComponent from "./CardComponent"; // Assuming your CardComponent is in the same directory
-
+import CardComponent from "./CardComponent";
 const UserProfilesWrapper = () => {
   const userProfiles = [
     {
@@ -8,61 +7,61 @@ const UserProfilesWrapper = () => {
       initials: "KB",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "blue",
+      backgroundColor: "bg-blue-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "blue",
+      backgroundColor: "bg-blue-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "blue",
+      backgroundColor: "bg-blue-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "yellow",
+      backgroundColor: "bg-yellow-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "yellow",
+      backgroundColor: "bg-yellow-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "yellow",
+      backgroundColor: "bg-yellow-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "blue",
+      backgroundColor: "bg-blue-500",
     },
     {
       name: "Nelle Howard",
       initials: "NH",
       text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected",
       dateCount: 3,
-      backgroundColor: "blue",
+      backgroundColor: "bg-blue-500",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
       {userProfiles.map((userProfile, index) => (
         <CardComponent
           key={index}

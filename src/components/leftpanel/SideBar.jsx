@@ -20,7 +20,7 @@ const SideBar = () => {
   };
 
   return (
-    <div>
+    <div className="w-20">
       <div className="lg:hidden flex justify-between items-center p-4 z-50">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}

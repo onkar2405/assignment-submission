@@ -13,26 +13,23 @@ const cards = [
 
 const CustomCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3); // Default for desktops
+  const [cardsPerPage, setCardsPerPage] = useState(3);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1280) {
-        setCardsPerPage(3); // For large desktops
+        setCardsPerPage(3);
       } else if (window.innerWidth >= 768) {
-        setCardsPerPage(2); // For tablets
+        setCardsPerPage(2);
       } else {
-        setCardsPerPage(1); // For mobiles
+        setCardsPerPage(1);
       }
     };
 
-    // Set initial value on mount
     handleResize();
 
-    // Listen to resize events
     window.addEventListener("resize", handleResize);
 
-    // Clean up listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

@@ -50,7 +50,6 @@ const NavBar = () => {
         <div className="flex gap-6 items-center">
           <div className="bg-blue-500 w-10 h-10 rounded-xl mr-4"></div>
 
-          {/* Desktop Menu */}
           <div className="hidden xl-custom:flex gap-6">
             <DropButton name="Products" resourceList={productList} />
             <a href="#" className="text-sm font-medium hover:text-gray-300">
@@ -66,7 +65,6 @@ const NavBar = () => {
             </a>
           </div>
 
-          {/* Mobile Hamburger Icon */}
           <button
             className="xl-custom:hidden text-white focus:outline-none"
             onClick={toggleMenu}
@@ -88,7 +86,6 @@ const NavBar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="xl-custom:hidden absolute top-0 left-0 w-full bg-gray-800 text-white p-4 rounded-b-xl">
             <div className="flex flex-col gap-4">
