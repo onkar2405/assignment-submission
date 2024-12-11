@@ -1,11 +1,12 @@
+import React from "react";
 import SideBar from "../leftpanel/SideBar";
 import UserProfilesWrapper from "../rightpanel/UserProfilesWrapper";
 
 const MainPanel = () => {
   return (
-    <div className="flex gap-4 bg-gray-100 rounded-xl">
+    <div className="flex flex-col lg:flex-row bg-gray-100 rounded-xl">
       <SideBar />
-      <div className="p-8">
+      <div className="lg:flex-1 p-8 mt-4 lg:mt-0">
         <UserProfilesWrapper />
       </div>
     </div>

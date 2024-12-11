@@ -5,12 +5,12 @@ import { MdCalendarToday, MdEmail, MdFileOpen } from "react-icons/md";
 const Content = () => {
   return (
     <div>
-      <h1 className="flex flex-wrap text-5xl">
+      <h1 className="flex flex-wrap text-5xl space-x-4">
         Excepteur sint occaecat dolore
-        <span className="ml-12 flex items-center text-blue-300">
+        <span className="flex items-center text-blue-300">
           <MdEmail /> Email
         </span>
-        <span className="ml-8 flex items-center text-pink-500">
+        <span className="flex items-center text-pink-500">
           <MdCalendarToday /> Events
         </span>
         <span className="flex items-center text-green-600">

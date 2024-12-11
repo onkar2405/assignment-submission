@@ -9,3 +9,7 @@
 .move-left-20 {
   left: 20%;
 }
+
+.w-webkit-fill-available {
+  width: -webkit-fill-available;
+}

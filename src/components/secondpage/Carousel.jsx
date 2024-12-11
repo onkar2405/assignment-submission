@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import FeatureCard from "./FeatureCard";
 
@@ -11,10 +11,30 @@ const cards = [
   "/IFrame.png",
 ];
 
-const cardsPerPage = 3;
-
 const CustomCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(3); // Default for desktops
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setCardsPerPage(3); // For large desktops
+      } else if (window.innerWidth >= 768) {
+        setCardsPerPage(2); // For tablets
+      } else {
+        setCardsPerPage(1); // For mobiles
+      }
+    };
+
+    // Set initial value on mount
+    handleResize();
+
+    // Listen to resize events
+    window.addEventListener("resize", handleResize);
+
+    // Clean up listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
     if (currentIndex < cards.length - cardsPerPage) {
@@ -29,8 +49,8 @@ const CustomCarousel = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between">
+    <div className="min-w-full">
+      <div className="flex justify-between items-center">
         <h1 className="text-3xl">Get the latest in Privacy</h1>
 
         <div className="flex gap-2">
@@ -66,7 +86,10 @@ const CustomCarousel = () => {
           }}
         >
           {cards.map((card, index) => (
-            <div key={index} className="flex-shrink-0 w-1/3">
+            <div
+              key={index}
+              className="flex-shrink-0 w-full sm:w-1 md:w-1/2 lg:w-1/3 xl:w-1/3"
+            >
               <FeatureCard src={card} />
             </div>
           ))}

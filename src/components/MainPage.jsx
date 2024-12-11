@@ -5,7 +5,7 @@ import NavBar from "./navbar/NavBar";
 const MainPage = () => {
   return (
     <div className="relative bg-white w-90 m-auto rounded-xl border border-gray-200">
-      <div className="absolute w-full -top-6 move-left-20 z-10">
+      <div className="absolute w-webkit-fill-available -top-6 move-left-20 z-10">
         <NavBar />
       </div>
       <div className="mt-28">

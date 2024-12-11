@@ -22,6 +22,9 @@ module.exports = {
       left: {
         md: "20%",
       },
+      screens: {
+        "xl-custom": "1270px", // Add this custom breakpoint
+      },
     },
   },
   plugins: [],
