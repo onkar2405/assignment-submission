@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const DropButton = ({ name, resourceList }) => {
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
