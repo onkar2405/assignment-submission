@@ -10,7 +10,7 @@ const MainPage = () => {
       </div>
       <div className="mt-28">
         <MainContent />
-        <div className="w-90 m-auto shadow-xl mt-40">
+        <div className="w-90 m-auto shadow-xl mt-20">
           <MainPanel />
         </div>
       </div>

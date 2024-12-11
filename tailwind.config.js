@@ -17,6 +17,9 @@ module.exports = {
         90: "90%",
         100: "100%",
       },
+      height: {
+        80: "80%",
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },

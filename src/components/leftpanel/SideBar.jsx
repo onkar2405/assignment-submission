@@ -33,45 +33,47 @@ const SideBar = () => {
       <div
         className={`${
           isSidebarOpen ? "block" : "hidden"
-        } lg:block bg-white flex flex-col p-4 h-full fixed inset-0 lg:relative lg:w-100 transition-all duration-300 ease-in-out`}
+        } lg:flex bg-white flex flex-col justify-between p-4 h-full fixed inset-0 lg:relative lg:w-100 transition-all duration-300 ease-in-out`}
         style={{
-          width: isSidebarOpen && window.innerWidth < 1024 ? "70%" : "100%",
-          maxWidth: isSidebarOpen && window.innerWidth < 1024 ? "70%" : "100%",
+          width: isSidebarOpen && window.innerWidth < 1024 ? "60%" : "100%",
+          maxWidth: isSidebarOpen && window.innerWidth < 1024 ? "60%" : "100%",
         }}
       >
-        <Profile />
-        <hr className="mx-4" />
-        <div className="mt-8 flex-1 overflow-y-auto">
-          <Label
-            icon={<FaInbox />}
-            text="Inbox"
-            active={activeLabel === "Inbox"}
-            onClick={() => handleLabelClick("Inbox")}
-          />
-          <Label
-            icon={<FaCheckSquare />}
-            text="Sent"
-            active={activeLabel === "Sent"}
-            onClick={() => handleLabelClick("Sent")}
-          />
-          <Label
-            icon={<FaEdit />}
-            text="Drafts"
-            active={activeLabel === "Drafts"}
-            onClick={() => handleLabelClick("Drafts")}
-          />
-          <Label
-            icon={<FaTrash />}
-            text="Deleted"
-            active={activeLabel === "Deleted"}
-            onClick={() => handleLabelClick("Deleted")}
-          />
-          <Label
-            icon={<FaStar />}
-            text="Favourites"
-            active={activeLabel === "Favourites"}
-            onClick={() => handleLabelClick("Favourites")}
-          />
+        <div className="flex flex-col">
+          <Profile />
+          <hr className="mx-4" />
+          <div className="mt-8 flex-1 overflow-y-auto">
+            <Label
+              icon={<FaInbox />}
+              text="Inbox"
+              active={activeLabel === "Inbox"}
+              onClick={() => handleLabelClick("Inbox")}
+            />
+            <Label
+              icon={<FaCheckSquare />}
+              text="Sent"
+              active={activeLabel === "Sent"}
+              onClick={() => handleLabelClick("Sent")}
+            />
+            <Label
+              icon={<FaEdit />}
+              text="Drafts"
+              active={activeLabel === "Drafts"}
+              onClick={() => handleLabelClick("Drafts")}
+            />
+            <Label
+              icon={<FaTrash />}
+              text="Deleted"
+              active={activeLabel === "Deleted"}
+              onClick={() => handleLabelClick("Deleted")}
+            />
+            <Label
+              icon={<FaStar />}
+              text="Favourites"
+              active={activeLabel === "Favourites"}
+              onClick={() => handleLabelClick("Favourites")}
+            />
+          </div>
         </div>
         <div className="flex flex-col mt-8 space-y-2 px-4">
           <button className="bg-blue-500 text-white py-2 px-4 rounded-md">
