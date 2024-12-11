@@ -1,7 +1,7 @@
-import ArrowCardsWrapper from "./ArrowCardsWrapper";
-import Content from "./Content";
-import CustomCarousel from "./Carousel";
-import JobCardWrapper from "./JobCardWrapper";
+import ArrowCardsWrapper from "./secondpage/ArrowCardsWrapper";
+import CustomCarousel from "./secondpage/Carousel";
+import Content from "./secondpage/Content";
+import JobCardWrapper from "./secondpage/JobCardWrapper";
 
 const SecondPage = () => {
   return (

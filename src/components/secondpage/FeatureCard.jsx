@@ -1,5 +1,5 @@
 import React from "react";
-import CardButton from "./Common/CardButton";
+import CardButton from "../Common/CardButton";
 
 const FeatureCard = ({ src }) => {
   return (
